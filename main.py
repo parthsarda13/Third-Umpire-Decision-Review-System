@@ -1,4 +1,3 @@
-# All media file is available for download as a zip file (See description)
 import tkinter 
 import cv2 # pip install opencv-python
 import PIL.Image, PIL.ImageTk # pip install pillow
@@ -38,10 +37,7 @@ def pending(decision):
     frame = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(frame))
     canvas.image = frame
     canvas.create_image(0,0, image=frame, anchor=tkinter.NW)
-    # 2. Wait for 1 second
     time.sleep(1.5)
-
-    # 5. Display out/notout image
     if decision == 'out':
         decisionImg = "out.png"
     else:
@@ -66,7 +62,7 @@ def not_out():
     thread.start()
     print("Player is not out")
 
-# Width and height of our main screen
+
 SET_WIDTH = 650
 SET_HEIGHT = 368
 
